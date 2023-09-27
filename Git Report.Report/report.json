@@ -1,0 +1,115 @@
+{
+  "config": "{\"version\":\"5.44\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU04\",\"version\":\"5.45\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "pods": [
+    {
+      "boundSection": "ReportSection",
+      "config": "{}",
+      "name": "Pod",
+      "parameters": "[{\"name\":\"Param_Filtera789bfab90df18a9e229\",\"boundFilter\":\"Filtera789bfab90df18a9e229\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Offshore\"}},\"Property\":\"Partner/Client\"}}}]",
+      "type": 1
+    },
+    {
+      "boundSection": "ReportSection36623c551a4207c8b01d",
+      "config": "{}",
+      "name": "Pod1",
+      "parameters": "[{\"name\":\"Param_Filter6703689a3ccdf9cd18b0\",\"boundFilter\":\"Filter6703689a3ccdf9cd18b0\",\"fieldExpr\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Offshore\"}},\"Property\":\"Partner/Client\"}}}]",
+      "type": 1
+    }
+  ],
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY23SU04",
+            "path": "BaseThemes/CY23SU04.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"headerSize\":{\"expr\":{\"Literal\":{\"Value\":\"9L\"}}}}}]}}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filtera789bfab90df18a9e229\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Offshore\"}},\"Property\":\"Partner/Client\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"Offshore\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Partner/Client\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}],[{\"Literal\":{\"Value\":\"'Avasoft'\"}}],[{\"Literal\":{\"Value\":\"'Gibraltar'\"}}],[{\"Literal\":{\"Value\":\"'MG'\"}}],[{\"Literal\":{\"Value\":\"'Mode Global'\"}}],[{\"Literal\":{\"Value\":\"'Nuemeta'\"}}],[{\"Literal\":{\"Value\":\"'Quva Pharma'\"}}],[{\"Literal\":{\"Value\":\"'RC'\"}}],[{\"Literal\":{\"Value\":\"'Verinext'\"}}],[{\"Literal\":{\"Value\":\"'Vnext'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":5,\"objects\":{}}]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2c2df4a034e350bcbe73\",\"layouts\":[{\"id\":0,\"position\":{\"x\":736,\"y\":384,\"z\":3000,\"width\":512,\"height\":320,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(On-Site.Billing Status)\"}],\"Category\":[{\"queryRef\":\"Offshore.Control Area\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"On-Site\",\"Type\":0},{\"Name\":\"o1\",\"Entity\":\"Offshore\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Billing Status\"}},\"Function\":5},\"Name\":\"CountNonNull(On-Site.Billing Status)\",\"NativeReferenceName\":\"Count of Billing Status\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o1\"}},\"Property\":\"Control Area\"},\"Name\":\"Offshore.Control Area\",\"NativeReferenceName\":\"Control Area\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Billing Status\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 320.00,
+          "width": 512.00,
+          "x": 736.00,
+          "y": 384.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"95fd443a7cc3434dda77\",\"layouts\":[{\"id\":0,\"position\":{\"x\":911.9999999999999,\"y\":80,\"z\":0,\"width\":352,\"height\":256,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"decompositionTreeVisual\",\"projections\":{\"Analyze\":[{\"queryRef\":\"Offshore.Total Resource\"}],\"ExplainBy\":[{\"queryRef\":\"Offshore.Partner/Client\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"Offshore\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Total Resource\"},\"Name\":\"Offshore.Total Resource\",\"NativeReferenceName\":\"Total Resource\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Partner/Client\"},\"Name\":\"Offshore.Partner/Client\",\"NativeReferenceName\":\"Project/Client\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Total Resource\"}}}]},\"expansionStates\":[{\"roles\":[\"ExplainBy\"],\"levels\":[{\"queryRefs\":[\"Offshore.Partner/Client\"],\"isCollapsed\":true,\"isPinned\":true}],\"root\":{\"identityValues\":null}}],\"columnProperties\":{\"Offshore.Partner/Client\":{\"displayName\":\"Project/Client\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"tree\":[{\"properties\":{\"effectiveBarsPerLevel\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}},\"density\":{\"expr\":{\"Literal\":{\"Value\":\"'dense'\"}}},\"defaultClickAction\":{\"expr\":{\"Literal\":{\"Value\":\"'select'\"}}},\"responsiveLayout\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"connectorType\":{\"expr\":{\"Literal\":{\"Value\":\"'curve'\"}}},\"accentColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"connectorDefaultColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"insights\":[{\"properties\":{\"isAINode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Offshore\"}},\"Property\":\"Partner/Client\"}},\"Right\":{\"Literal\":{\"Value\":\"'Avasoft'\"}}}}}]}}],\"analysis\":[{\"properties\":{\"aiMode\":{\"expr\":{\"Literal\":{\"Value\":\"'absolute'\"}}}}}],\"dataBars\":[{\"properties\":{\"dataBarWidthPercent\":{\"expr\":{\"Literal\":{\"Value\":\"92L\"}}}}},{\"properties\":{},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":0}}],\"metadata\":\"Offshore.Total Resource\"}}],\"categoryLabels\":[{\"properties\":{\"categoryLabelFontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}],\"dataLabels\":[{\"properties\":{\"dataLabelFontSize\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}}}}],\"levelHeader\":[{\"properties\":{\"levelTitleFontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"showSubtitles\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 256.00,
+          "width": 352.00,
+          "x": 912.00,
+          "y": 80.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"d5ca5b992e033a154da3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":16,\"y\":32,\"z\":1000,\"width\":624,\"height\":320,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Monthly Cost.Month\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(Monthly Cost.Cost)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Monthly Cost\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Cost\"}},\"Function\":0},\"Name\":\"Sum(Monthly Cost.Cost)\",\"NativeReferenceName\":\"Cost\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Month\"},\"Name\":\"Monthly Cost.Month\",\"NativeReferenceName\":\"Month\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"concatenateLabels\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.6}}}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"valueAxis\":[{\"properties\":{\"switchAxisPosition\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 320.00,
+          "width": 624.00,
+          "x": 16.00,
+          "y": 32.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"e3d399099f07affc5480\",\"layouts\":[{\"id\":0,\"position\":{\"x\":48,\"y\":384,\"z\":2000,\"width\":704,\"height\":320,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Offshore.Partner/Client\",\"active\":true}],\"Y\":[{\"queryRef\":\"Offshore.Total Resource\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"Offshore\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Partner/Client\"},\"Name\":\"Offshore.Partner/Client\",\"NativeReferenceName\":\"Partner/Client\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Total Resource\"},\"Name\":\"Offshore.Total Resource\",\"NativeReferenceName\":\"Total Resource\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Total Resource\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 320.00,
+          "width": 704.00,
+          "x": 48.00,
+          "y": 384.00,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 2",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filter6703689a3ccdf9cd18b0\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Offshore\"}},\"Property\":\"Partner/Client\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"Offshore\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Partner/Client\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}],[{\"Literal\":{\"Value\":\"'Avasoft'\"}}],[{\"Literal\":{\"Value\":\"'Gibraltar'\"}}],[{\"Literal\":{\"Value\":\"'MG'\"}}],[{\"Literal\":{\"Value\":\"'Mode Global'\"}}],[{\"Literal\":{\"Value\":\"'Nuemeta'\"}}],[{\"Literal\":{\"Value\":\"'Quva Pharma'\"}}],[{\"Literal\":{\"Value\":\"'RC'\"}}],[{\"Literal\":{\"Value\":\"'Verinext'\"}}],[{\"Literal\":{\"Value\":\"'Vnext'\"}}]]}}}]},\"type\":\"Categorical\",\"howCreated\":5,\"objects\":{}}]",
+      "height": 720.00,
+      "name": "ReportSection36623c551a4207c8b01d",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"b575ccacd4c7e0e09fe5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":100,\"height\":40,\"z\":1000,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'back'\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'Back'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 40.00,
+          "width": 100.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"fe3a624981ae64254581\",\"layouts\":[{\"id\":0,\"position\":{\"x\":112.00000000000001,\"y\":80,\"z\":0,\"width\":928,\"height\":592,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"CountNonNull(Offshore.R_Id)\"},{\"queryRef\":\"Offshore.Project Name\"},{\"queryRef\":\"Offshore.Project\"},{\"queryRef\":\"Offshore.Partner/Client\"},{\"queryRef\":\"Offshore.Overall Month Cost\"},{\"queryRef\":\"Offshore.Next Level\"},{\"queryRef\":\"Offshore.Is Interview Ready\"},{\"queryRef\":\"Offshore.Independent\"},{\"queryRef\":\"Offshore.Group\"},{\"queryRef\":\"Offshore.Control Area\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"o\",\"Entity\":\"Offshore\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"R_Id\"}},\"Function\":5},\"Name\":\"CountNonNull(Offshore.R_Id)\",\"NativeReferenceName\":\"R_Id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Project Name\"},\"Name\":\"Offshore.Project Name\",\"NativeReferenceName\":\"Project Name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Project\"},\"Name\":\"Offshore.Project\",\"NativeReferenceName\":\"Project\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Partner/Client\"},\"Name\":\"Offshore.Partner/Client\",\"NativeReferenceName\":\"Partner/Client\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Overall Month Cost\"},\"Name\":\"Offshore.Overall Month Cost\",\"NativeReferenceName\":\"Overall Month Cost\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Next Level\"},\"Name\":\"Offshore.Next Level\",\"NativeReferenceName\":\"Next Level\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Is Interview Ready\"},\"Name\":\"Offshore.Is Interview Ready\",\"NativeReferenceName\":\"Is Interview Ready\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Independent\"},\"Name\":\"Offshore.Independent\",\"NativeReferenceName\":\"Independent\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Group\"},\"Name\":\"Offshore.Group\",\"NativeReferenceName\":\"Group\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"o\"}},\"Property\":\"Control Area\"},\"Name\":\"Offshore.Control Area\",\"NativeReferenceName\":\"Control Area\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 592.00,
+          "width": 928.00,
+          "x": 112.00,
+          "y": 80.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
